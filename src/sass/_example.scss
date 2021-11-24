@@ -1,178 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.spinner {
-  position: relative;
+body{
   display: flex;
-  width: 88px;
-  height: 88px;
-  margin: 20px;
-  --height: 28px;
-  --width: 5px;
-  --color: gray;
-  --activeColor: black;
-  --speed: 1s;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  color: black;
 }
 
-.spinner div {
-  background: var(--color);
-  position: absolute;
-  width: var(--width);
-  height: var(--height);
+.pagination ul{
+  display: flex;
+}
+ 
+.pagination ul li{
+  list-style: none;
+  line-height: 45px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@keyframes inlarge1 {
-  0%, 12.5%, 100% {
-    background: var(--color);
-  }
-  6.25% {
-    background: var(--activeColor);
-  }
+.pagination ul li.numb{
+  border-radius: 5%;
+  height: 40px;
+  width: 40px;
+  margin: 0 3px;
+} 
+
+.pagination ul li.dots{
+  cursor: default;
+} 
+
+.pagination ul li.btn{
+  background:  #F7F7F7;
+  border-radius: 5%;
+  padding: 0 20px;
 }
 
-.circle1 {
-  top: 0px;
-  left: 40px;
-  animation: var(--speed) ease-in-out 0s infinite inlarge1;
+// .pagination ul li.prev{
+// border-radius: 25px 5px 5px 25px;
+// } 
+
+// .pagination ul li.next{
+//   border-radius: 5px 25px 25px 5px;
+//   } 
+
+.pagination ul li.active,
+.pagination ul li.numb:hover,
+.pagination ul li.numb:focus{
+  background: #FF6B08;
+  color: white;
 }
 
-@keyframes inlarge2 {
-  0%, 12.5%, 25%, 100% {
-    background: var(--color);
-  }
-  18.75% {
-    background: var(--activeColor);
-  }
-}
-
-.circle2 {
-  top: 9px;
-  left: 61px;
-  transform: rotate(45deg);
-  animation: var(--speed) ease-in-out 0s infinite inlarge2;
-}
-
-@keyframes inlarge3 {
-  0%, 25%, 37.5%, 100% {
-    background: var(--color);
-  }
-  31.25% {
-    background: var(--activeColor);
-  }
-}
-
-.circle3 {
-  top: 30px;
-  left: 70px;
-  transform: rotate(90deg);
-  animation: var(--speed) ease-in-out 0s infinite inlarge3;
-}
-
-@keyframes inlarge4 {
-  0%, 37.5%, 50%, 100% {
-    background: var(--color);
-  }
-  43.75% {
-    background: var(--activeColor);
-  }
-}
-
-.circle4 {
-  top: 51px;
-  left: 61px;
-  transform: rotate(135deg);
-  animation: var(--speed) ease-in-out 0s infinite inlarge4;
-}
-
-@keyframes inlarge5 {
-  0%, 50%, 62.5%, 100% {
-    background: var(--color);
-  }
-  56.25% {
-    background: var(--activeColor);
-  }
-}
-
-.circle5 {
-  top: 60px;
-  left: 40px;
-  animation: var(--speed) ease-in-out 0s infinite inlarge5;
-}
-
-@keyframes inlarge6 {
-  0%, 62.5%, 75%, 100% {
-    background: var(--color);
-  }
-  68.75% {
-    background: var(--activeColor);
-  }
-}
-
-.circle6 {
-  top: 51px;
-  left: 18px;
-  transform: rotate(225deg);
-  animation: var(--speed) ease-in-out 0s infinite inlarge6;
-}
-
-@keyframes inlarge7 {
-  0%, 75%, 87.5%, 100% {
-    background: var(--color);
-  }
-  81.25% {
-    background: var(--activeColor);
-  }
-}
-
-.circle7 {
-  top: 30px;
-  left: 10px;
-  transform: rotate(270deg);
-  animation: var(--speed) ease-in-out 0s infinite inlarge7;
-}
-
-@keyframes inlarge8 {
-  0%, 87.5%, 100% {
-    background: var(--color);
-  }
-  93.75% {
-    background: var(--activeColor);
-  }
-}
-
-.circle8 {
-  top: 8px;
-  left: 20px;
-  transform: rotate(315deg);
-  animation: var(--speed) ease-in-out 0s infinite inlarge8;
-}
-
-
-.loader {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: conic-gradient(lightgray, transparent);
-
-  animation: rotating 1s linear infinite;
-}
-
-.loader::before {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 10px;
-  left: 10px;
-  border-radius: 50%;
-  background: white;
-}
-
-@keyframes rotating {
-    from {
-        transform: rotate(360deg);
-        
-    }
-    to {
-        transform: rotate(0deg);
-    }
+.pagination ul li.btn:hover,
+.pagination ul li.btn:focus{
+  background: #F7F7F7;
+  color: black;
 }
