@@ -1,7 +1,7 @@
 import './sass/main.scss';
 
 const ulTag = document.querySelector("ul");
-let totalPages = 20;
+let totalPages = 100;
 
 function element(totalPages, page){
     let liTag = '';
@@ -54,4 +54,4 @@ function element(totalPages, page){
     ulTag.innerHTML = liTag;
 
 }
-element(totalPages, 7);
+element(totalPages, 9);
